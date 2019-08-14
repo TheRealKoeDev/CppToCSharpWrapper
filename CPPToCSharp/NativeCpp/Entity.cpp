@@ -7,6 +7,7 @@ namespace Core
     {
         std::cout << "Created the Entity object!" << std::endl;
     }
+
     void Entity::Move(float deltaX, float deltaY)
     {
         m_XPos += deltaX;
