@@ -1,4 +1,6 @@
 #pragma once
+#include "pch.h"
+
 using namespace System;
 
 namespace CLI 
@@ -7,29 +9,32 @@ namespace CLI
     public ref class ManagedObject
     {
         protected:
-            T* m_Instance;
+            T* instance;
         public:
 
             ManagedObject(T* instance)
-                : m_Instance(instance)
+                : instance(instance)
             {
             }
 
+            T* GetInstance();
+
             virtual ~ManagedObject()
             {
-                if (m_Instance != nullptr)
+                if (instance != nullptr)
                 {
-                    delete m_Instance;
+                    delete instance;
                 }
             }
+
             !ManagedObject()
             {
-                if (m_Instance != nullptr)
+                if (instance != nullptr)
                 {
-                    delete m_Instance;
+                    delete instance;
                 }
             }
-            T* GetInstance();
+            
     };
 }
 

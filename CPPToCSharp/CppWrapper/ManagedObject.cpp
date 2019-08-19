@@ -1,5 +1,5 @@
 #pragma once
-#include "ManagedObject.h"
+#include "pch.h"
 
 namespace CLI 
 {
@@ -29,7 +29,7 @@ namespace CLI
     template<class T>
     T* ManagedObject<T>::GetInstance()
     {
-        return m_Instance;
+        return instance;
     }
 }
 

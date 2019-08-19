@@ -1,5 +1,6 @@
-#include "Entity.h"
+#include "pch.h"
 #include <iostream>
+
 namespace Core
 {
     Entity::Entity(const char* name, float xPos, float yPos)
@@ -7,7 +8,7 @@ namespace Core
     {
         std::cout << "Created the Entity object!" << std::endl;
     }
-
+	
     void Entity::Move(float deltaX, float deltaY)
     {
         m_XPos += deltaX;
